@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Twitter</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+	<div class="container text-left">
+		<h1>Registro de nuevo usuario</h1>	
+		<h2>Introduce tu usuario, tu contraseña</h2>
+		<div th:if="${error}" th:text="${error}">  errorMsg  </div>
+		<div class="div-publi col-md-6">
+			<form action="#" th:action="@{/login}" th:object="${usuario}" method="post">
+				<input name="user" class="form-control" placeholder="Usuario" />
+				<input type="password" name="password" class="form-control" placeholder="Contraseña" />
+				<button name="login" type="submit">Login</button>
+				<br/>
+				<br/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

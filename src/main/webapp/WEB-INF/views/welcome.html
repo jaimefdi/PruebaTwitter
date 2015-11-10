@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Twitter</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+	<div class="container text-left">
+		<h1>Bienvenido a Twitter</h1>	
+		<div class="div-publi col-md-6" th:if="${usuarioLogin} != null">
+		<p th:text="'Bienvenido' + ${usuarioLogin.username}"></p>
+			<form action="#" th:action="@{/welcome}" th:object="${usuarioLogin}" method="post">
+				<p>Introduce el tweet</p>
+				<textarea name="texto" class="form-control" rows="2" ></textarea>
+				<button name="publicar">Publicar tweet</button>
+				<br/>
+				<br/>
+			</form>
+		</div>
+		<div th:if="${userlogin} == null">
+			<p>No estás registrado. Logueate <a href="login.html">aqui</a> o registrate por primera vez <a href="registrarse.html">aqui</a></p>
+		</div>
+		<div class="col-md-6">
+		    <h3>Ultimos posts publicados</h3>
+			<div th:each="t : ${dameTweets}"> 
+			  <p th:text="${t.texto}"></p>
+			  <p th:text="'Publicado por ti el ' + ${t.fecha}"></p>
+			</div>     
+	</div>
+	</div>
+</body>
+</html>
