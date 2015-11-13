@@ -12,7 +12,7 @@
 		<div th:if="${error}" th:text="${error}">  errorMsg  </div>
 		<div class="div-publi col-md-6">
 			<form action="#" th:action="@{/login}" th:object="${usuario}" method="post">
-				<input name="user" class="form-control" placeholder="Usuario" />
+				<input name="nombre" class="form-control" placeholder="Usuario" />
 				<input type="password" name="password" class="form-control" placeholder="Contraseña" />
 				<button name="login" type="submit">Login</button>
 				<br/>

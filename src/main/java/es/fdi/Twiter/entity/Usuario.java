@@ -49,6 +49,30 @@ public class Usuario {
 	public void setLog(boolean log) {
 		this.log = log;
 	}
+
+	public boolean emailCorrecto() {
+		if (this.email.contains("@")){
+			String[] mail = this.email.split("@");
+			if ((mail[0].length() > 0) && (mail[1].length() > 0) && (mail[1].contains("."))) {
+				return true;
+			}else return false;
+		}else 
+			return false;
+	}
+
+	public boolean nombreCorrecto() {
+		if (this.nombre.length() > 0){
+			return true;
+		}
+		return false;
+	}
+
+	public boolean passwordCorrecta() {
+		if (this.password.length() > 0){
+			return true;
+		}
+		return false;
+	}
 	
 	
 	

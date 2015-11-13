@@ -27,8 +27,8 @@ public class UserService {
 		return userRepo.existeUsuario(u);
 	}
 	
-	public boolean anyadeUsuario(Usuario u){
-		return userRepo.anyadeUsuario(u);
+	public void anyadeUsuario(Usuario u){
+		 userRepo.anyadeUsuario(u);
 	}
 
 	public Usuario dameUsuario(Usuario u){
@@ -36,7 +36,6 @@ public class UserService {
 	}
 	
 	public Usuario dameUsuarioLogueado() {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.dameUsuarioLogueado();
 	}
 }

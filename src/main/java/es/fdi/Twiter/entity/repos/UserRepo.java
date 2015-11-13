@@ -39,13 +39,11 @@ public class UserRepo {
 		return user;
 	}
 	
-	public boolean anyadeUsuario(Usuario u){
+	public void anyadeUsuario(Usuario u){
 		//Antes de añadir un usuario, hay que comprobar que no existe
-		if (!existeUsuario(u)){
+		
 			listaUsu.add(u);
-			return true;
-		}
-		return false;
+		
 	}
 
 	public boolean existeUsuario(Usuario u) {
@@ -58,5 +56,15 @@ public class UserRepo {
 			i++;
 		}
 		return false;
+	}
+
+	public Usuario dameUsuarioLogueado() {
+		for (int i=0;i<listaUsu.size();i++){
+			if (listaUsu.get(i).isLog()){
+				return listaUsu.get(i);
+			}
+		}
+		
+		return null;
 	}
 }

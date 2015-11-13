@@ -6,7 +6,7 @@ public class Tweet {
 	private Integer identificador = null;
 	private String texto = null;
 	private Date fecha = null;
-	private Integer idUsuario = null;
+	private Usuario usuario = null;
 	
 	public Tweet(){
 		super();
@@ -30,11 +30,11 @@ public class Tweet {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public int getIdUsuario() {
-		return idUsuario;
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setIdUsuario(int idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setUsuario(Usuario u) {
+		this.usuario = u;
 	}
 	
 	

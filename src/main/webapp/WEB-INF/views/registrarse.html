@@ -10,12 +10,16 @@
 			
 		<h2>Introduce tu usuario, tu contrasenya y tu email</h2>
 		<div class="div-publi col-md-6">
-			 <div th:if="${error}" class="alert alert-danger" th:text="${error}">  Usuario o password incorrectos </div>
-     		<div th:if="${exito}" class="alert alert-success" th:text="${exito}">    Registrado con exito </div>
+			 <div th:if="${errorUsuario}" class="alert alert-danger" th:text="${errorUsuario}">  Usuario o password incorrectos </div>
+			 <div th:if="${errorNombre}" class="alert alert-danger" th:text="${errorNombre}">  Nombre incorrecto </div>
+			 <div th:if="${errorEmail}" class="alert alert-danger" th:text="${errorEmail}">  Email incorrecto </div>
+			 <div th:if="${errorPassword}" class="alert alert-danger" th:text="${errorPassword}">  Password incorrecta </div>
+     		 <div th:if="${exito}" class="alert alert-success" th:text="${exito}">    Registrado con exito </div>
+     		
 			<form action="#" th:action="@{/registrarse}" th:object="${usuario}" method="post">
-				<input name="userReg" class="form-control" placeholder="Usuario" />
-				<input type="password" name="passwordReg" class="form-control" placeholder="Contraseña" />
-				<input name="mailReg" class="form-control" placeholder="Email" />
+				<input name="nombre" class="form-control" placeholder="Usuario" />
+				<input type="password" name="password" class="form-control" placeholder="Contraseña" />
+				<input name="email" class="form-control" placeholder="Email" />
 				<button type="submit" name="registrar" >Registrarse</button>
 				<br/>
 				<br/>
