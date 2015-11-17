@@ -4,11 +4,13 @@
 	<title>Twitter</title>
 	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all" href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/login.css" th:href="@{/css/login.css}"/>
 </head>
 <body>
 	<div class="container text-left">
 		<h1>Registro de nuevo usuario</h1>	
-		<h2>Introduce tu usuario, tu contraseña</h2>
+		<h2>Introduce tu usuario, tu contrasenya</h2>
+		<img class="img-welcome" alt="User" src="../../images/login.jpg" th:src="@{/images/login.jpg}"/>
 		<div th:if="${error}" th:text="${error}">  errorMsg  </div>
 		<div class="div-publi col-md-6">
 			<form action="#" th:action="@{/login}" th:object="${usuario}" method="post">

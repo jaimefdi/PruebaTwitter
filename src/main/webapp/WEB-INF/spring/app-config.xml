@@ -11,7 +11,8 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-     
+     <mvc:resources location="/images/" mapping="/images/**" />
+ 	 <mvc:resources location="/css/" mapping="/css/**" />
        <!-- Configures the @Controller programming model -->
        <mvc:annotation-driven/>
 		<mvc:resources location="/css/" mapping="/css/**" />

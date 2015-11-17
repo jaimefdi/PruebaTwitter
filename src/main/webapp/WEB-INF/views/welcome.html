@@ -19,17 +19,19 @@
 				<br/>
 			</form>
 		</div>
-		<div th:if="${userlogin} == null">
+		<div  th:if="${userlogin} == null">
 			<p>No estás registrado.</p> 
-			<ul>
-			<li>Logueate <a href="login.htm">aqui</a></li>
-			<li>Registrate por primera vez <a href="registrarse.htm">aqui</a></li>
+			<ul >
+				<li >Logueate <a class="li-welcome" href="login.htm">aqui</a></li>
+				<li>Registrate por primera vez <a class="li-welcome" href="registrarse.htm">aqui</a></li>
 			</ul>
 		</div>
 		<div class="col-md-6">
 			
 			    <h3>Ultimos posts publicados</h3>
 				<div th:each="t : ${dameTweets}"> 
+					<img class="img-welcome" alt="User" src="../../images/user.jpg" th:src="@{/images/user.jpg}"/>
+					<br/>
 					<div class="div-tweets">
 					 	<p th:text="${t.texto}"></p>
 					  	<p th:text="'Publicado por ' + ${userlogin.nombre} + ' el ' + ${t.fecha}"></p>

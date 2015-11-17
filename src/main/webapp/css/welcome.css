@@ -1,3 +1,16 @@
-.fondo{
-	background-color: "#2ECCFA";
+body{
+	background-color: #2ECCFA;
+}
+
+.div-tweets{
+	background-color: white;
+}
+
+.li-welcome{
+	color: white;
+}
+
+.img-welcome{
+	height: 50px;
+	width: 50px;
 }
