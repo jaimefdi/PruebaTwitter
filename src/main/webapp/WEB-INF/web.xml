@@ -17,6 +17,11 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
 
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.Web.filter.DelegatingFilterProxy3</filter-class>
+	</filter>
+ 
   <servlet-mapping>
     <servlet-name>Twitter</servlet-name>
     <url-pattern>/*</url-pattern>
