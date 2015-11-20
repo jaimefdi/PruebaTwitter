@@ -22,6 +22,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
 	}
 	
+	/**
+	 * inMemoryAuthentication() habilita un repo de usuarios en memoria, pero necesita usuarios 
+	 * o el repo no valdrá para nada.
+	 * withUser() añade un nuevo usuario al repo de usuarios en memoria. Devuelve 
+	 * UserDetailsConfigurer, que cuenta con metodos para configurar el usuario.
+	 * 
+	 */
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()// hanilita un repo de usuarios en memoria
